@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="travel accounting software.jnlp">
+  <information>
+    <title>travel accounting software</title>
+    <vendor>gaj</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\commons-beanutils-1.9.0.jar" size="230951" download="eager" />
+    <jar href="lib\commons-codec-1.5.jar" size="73098" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-logging-1.1.1.jar" size="60841" download="eager" />
+    <jar href="lib\derby.jar" size="3230946" download="eager" />
+    <jar href="lib\derbyclient.jar" size="587986" download="eager" />
+    <jar href="lib\ecj-4.3.1.jar" size="1830791" download="eager" />
+    <jar href="lib\jasperreports-6.2.0.jar" size="5300024" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.2.0.jar" size="2478098" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.2.0.jar" size="5344915" download="eager" />
+    <jar href="lib\poi-3.13-20150929.jar" size="2497380" download="eager" />
+    <jar href="lib\poi-examples-3.13-20150929.jar" size="344456" download="eager" />
+    <jar href="lib\poi-excelant-3.13-20150929.jar" size="30520" download="eager" />
+    <jar href="lib\poi-ooxml-3.13-20150929.jar" size="1142386" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.13-20150929.jar" size="5641539" download="eager" />
+    <jar href="lib\poi-scratchpad-3.13-20150929.jar" size="1307277" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.19.3.jar" size="6213670" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="travel accounting software" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="travel.accounting.software.TravelAccountingSoftware"  name="travel accounting software" />
+  <update check="always"/>
+</jnlp>

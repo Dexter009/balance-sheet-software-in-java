@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="travel.accounting.software.FXMLDocumentController">
+<children>
+    <TitledPane animated="false" text="Travel Account Manager">
+    <content>       
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="618.0" prefWidth="695.0">
+               <children>
+                  <TabPane layoutX="14.0" layoutY="-3.0" prefHeight="608.0" prefWidth="683.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Ticketing">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="579.0" prefWidth="530.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5791583166332666" layoutX="-1.0" layoutY="30.0" orientation="VERTICAL" prefHeight="501.0" prefWidth="684.0">
+                                      <items>
+                                        <AnchorPane fx:id="s1" minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="574.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="168.0" layoutY="4.0" prefHeight="31.0" prefWidth="191.0" text="Passenger Details">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="22.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="44.0" prefHeight="28.0" prefWidth="95.0" text="Passenger Name" />
+                                                <TextField id="name" fx:id="pn" layoutX="109.0" layoutY="46.0" prefHeight="25.0" prefWidth="472.0" promptText="Full Name" />
+                                                <Label layoutX="14.0" layoutY="94.0" prefHeight="26.0" prefWidth="89.0" text="Contact No." />
+                                                <TextField id="contact" fx:id="contact" layoutX="109.0" layoutY="95.0" prefHeight="25.0" prefWidth="148.0" />
+                                                <Label layoutX="14.0" layoutY="140.0" prefHeight="26.0" prefWidth="63.0" text="Rate" />
+                                                <TextField id="rate" fx:id="rate1" layoutX="109.0" layoutY="141.0" prefHeight="25.0" prefWidth="149.0" />
+                                                <Label layoutX="374.0" layoutY="132.0" prefHeight="24.0" prefWidth="83.0" text="Destination" />
+                                                <TextField id="dest" fx:id="dest" layoutX="477.0" layoutY="131.0" prefHeight="25.0" prefWidth="185.0" />
+                                                <Label layoutX="13.0" layoutY="194.0" prefHeight="25.0" prefWidth="98.0" text="Date of Flight" />
+                                                <DatePicker id="dop" fx:id="dop" layoutX="112.0" layoutY="194.0" />
+                                                <Label layoutX="14.0" layoutY="239.0" prefHeight="25.0" prefWidth="94.0" text="Payment" />
+                                                <TextField id="payment" fx:id="payment" layoutX="112.0" layoutY="239.0" prefHeight="25.0" prefWidth="152.0" />
+                                                <Label layoutX="384.0" layoutY="95.0" prefHeight="25.0" prefWidth="73.0" text="From" />
+                                                <TextField id="due" fx:id="from" layoutX="484.0" layoutY="95.0" prefHeight="25.0" prefWidth="170.0" />
+                                                <Label layoutX="374.0" layoutY="174.0" prefHeight="23.0" prefWidth="59.0" text="Refund" />
+                                                <TextField fx:id="refund" layoutX="477.0" layoutY="173.0" />
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane fx:id="s2" minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="592.0">
+                                             <children>
+                                                <TextField id="emp" fx:id="arate" layoutX="75.0" layoutY="77.0" prefHeight="25.0" prefWidth="212.0" promptText="Agency Rate" />
+                                                <Label layoutX="17.0" layoutY="74.0" prefHeight="30.0" prefWidth="46.0" text="Rate" />
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="205.0" layoutY="2.0" prefHeight="27.0" prefWidth="170.0" text="Agency Details">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="16.0" layoutY="47.0" prefHeight="31.0" prefWidth="49.0" text="Agency" />
+                                                <TextField id="agency" fx:id="ba" layoutX="76.0" layoutY="50.0" prefHeight="25.0" prefWidth="211.0" promptText="Broker Agency" />
+                                                <TextField id="ar" fx:id="bag" layoutX="75.0" layoutY="105.0" promptText="Name of Employee" />
+                                                <Label layoutX="14.0" layoutY="104.0" prefHeight="26.0" prefWidth="52.0" text="Ticket By" />
+                                                <Label layoutX="14.0" layoutY="143.0" prefHeight="21.0" prefWidth="52.0" text="Remarks" />
+                                                <TextField fx:id="rem" layoutX="75.0" layoutY="141.0" prefHeight="25.0" prefWidth="506.0" />
+                                                <Label layoutX="375.0" layoutY="50.0" prefHeight="26.0" prefWidth="95.0" text="Date of Issue" />
+                                                <DatePicker fx:id="doi" layoutX="481.0" layoutY="51.0" prefHeight="25.0" prefWidth="155.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                    <Label layoutX="23.0" layoutY="4.0" prefHeight="25.0" prefWidth="83.0" text="Transaction ID" />
+                                    <TextField fx:id="tid" editable="false" layoutX="113.0" layoutY="2.0" />
+                                    <Button fx:id="mt" layoutX="255.0" layoutY="531.0" mnemonicParsing="false" onAction="#addBalance" prefHeight="34.0" prefWidth="148.0" text="Make Transaction" />
+                                    <Button fx:id="ct" layoutX="403.0" layoutY="530.0" mnemonicParsing="false" onAction="#clear" prefHeight="36.0" prefWidth="127.0" text="Clear Transaction" />
+                                    <CheckBox fx:id="cancell" layoutX="305.0" layoutY="8.0" mnemonicParsing="false" onAction="#checkselected" text="Cancellation" />
+                                    <Button fx:id="print" layoutX="150.0" layoutY="532.0" mnemonicParsing="false" onAction="#generateSalesReceipt" prefHeight="33.0" prefWidth="100.0" text="Print" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Details">
+                        <content>
+                          <AnchorPane fx:id="pp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="576.0" prefWidth="624.0">
+                                 <children>
+                                    <TableView fx:id="tableView" layoutX="13.0" layoutY="57.0" prefHeight="200.0" prefWidth="567.0">
+                                      <columns>
+                                        <TableColumn fx:id="Bdate" prefWidth="75.0" text="Date" />
+                                        <TableColumn fx:id="ttid" prefWidth="55.0" text="Tranid" />
+                                        <TableColumn fx:id="Bpart" prefWidth="257.0" text="Particulars" />
+                                          <TableColumn fx:id="Bdeb" prefWidth="74.0" text="Debit" />
+                                          <TableColumn fx:id="Bcre" prefWidth="77.0" text="Credit" />
+                                          <TableColumn fx:id="Balan" prefWidth="83.0" text="Balance" />
+                                          <TableColumn fx:id="Remarks" prefWidth="257.0" text="Remarks" />
+                                          <TableColumn fx:id="ServedBy" prefWidth="100.0" text="Served By" />
+                                          <TableColumn fx:id="Cnt" prefWidth="100.0" text="Contact" />
+                                          <TableColumn fx:id="frm111" prefWidth="100.0" text="From" />
+                                          <TableColumn fx:id="to111" prefWidth="100.0" text="To" />
+                                          <TableColumn fx:id="fdate" prefWidth="100.0" text="Flight Date" />
+                                      
+                                      </columns>
+                                    </TableView>
+                                    <Label alignment="CENTER" layoutX="221.0" layoutY="14.0" prefHeight="31.0" prefWidth="144.0" text="Balance Sheet">
+                                       <font>
+                                          <Font name="Arial Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="total" layoutX="21.0" layoutY="276.0" prefHeight="25.0" prefWidth="418.0" />
+                                    <Button fx:id="report" layoutX="497.0" layoutY="17.0" mnemonicParsing="false" onAction="#Print" text="Print" />
+                                    <Button fx:id="search" layoutX="453.0" layoutY="276.0" mnemonicParsing="false" onAction="#Something" prefHeight="25.0" prefWidth="81.0" text="Search" />
+                                    <Button fx:id="refresh" layoutX="453.0" layoutY="309.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="25.0" prefWidth="81.0" text="Refresh" />
+                                    <Button fx:id="exx" layoutX="21.0" layoutY="17.0" mnemonicParsing="false" onAction="#excelling" text="Excel" />
+                                    <DatePicker fx:id="datefrom" layoutX="92.0" layoutY="354.0" />
+                                    <DatePicker fx:id="dateto" layoutX="92.0" layoutY="405.0" />
+                                    <Button fx:id="balload" layoutX="306.0" layoutY="354.0" mnemonicParsing="false" onAction="#llloadData" prefHeight="70.0" prefWidth="95.0" text="Load" />
+                                    <Label layoutX="29.0" layoutY="355.0" prefHeight="23.0" prefWidth="49.0" text="FROM" />
+                                    <Label layoutX="29.0" layoutY="405.0" prefHeight="24.0" prefWidth="39.0" text="TO" />
+                                                    </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+    </children>
+</AnchorPane>

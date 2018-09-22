@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="15d0e5b3-d3fd-4d46-8c57-b0a5dd908945">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="_pname" class="java.lang.String"/>
+	<parameter name="_from" class="java.lang.String"/>
+	<parameter name="_to" class="java.lang.String"/>
+	<parameter name="_bag" class="java.lang.String"/>
+	<parameter name="_refun" class="java.lang.String"/>
+	<parameter name="_pay" class="java.lang.String"/>
+	<parameter name="_rate" class="java.lang.String"/>
+	<parameter name="_phn" class="java.lang.String"/>
+	<parameter name="_tid" class="java.lang.String"/>
+	<parameter name="_fd" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="187" y="0" width="151" height="31" uuid="cc8d3947-fd1b-4ea0-9c73-1ffa47bb2587"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[ZD TOURS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="199" y="15" width="100" height="20" uuid="688f1495-acb7-4c0f-a70b-745a67750abb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Receipt]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="444" y="15" width="100" height="20" uuid="a3eda904-7094-40b5-895e-c62a7d669452"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="135" splitType="Stretch">
+			<staticText>
+				<reportElement x="128" y="24" width="83" height="13" uuid="d1ef9528-b740-4b72-ac4a-a5af553131e8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Passenger Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="211" y="24" width="100" height="13" uuid="038b007b-23ff-4400-b356-5c2bdc4a3b58"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_pname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="37" width="29" height="12" uuid="9cc2dc81-0484-4763-9aed-e62c2769a368"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[From]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="46" y="37" width="100" height="12" uuid="fc161aea-eef6-4b2b-a9d2-6861c96a8c87"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_from}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="237" y="37" width="42" height="13" uuid="287f9888-cb58-4f17-a028-a6db5792c3e9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[To]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="37" width="100" height="13" uuid="c755afa4-e5d5-4cd6-aa19-1525f8740747"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_to}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="83" height="12" uuid="35a3f145-1452-4725-8360-0ee08d3cffad"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Transaction Id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="0" width="100" height="12" uuid="0373061d-8096-4019-8dee-9dc7fae87c95"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_tid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="29" height="14" uuid="b8a3226b-e8b7-45ff-93e9-15d4b14c4036"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Rate]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="46" y="50" width="100" height="15" uuid="572f0178-e739-461c-9fab-d84382b51d57"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_rate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="237" y="50" width="42" height="14" uuid="2d565eb3-81fc-44ad-99bb-4827337cb359"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Payment]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="279" y="50" width="100" height="14" uuid="e9900e43-e864-49b1-84c3-2031be328826"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_pay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="434" y="50" width="31" height="15" uuid="2131f845-a66f-45ea-a51d-44d90ac90c9f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Refund]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="465" y="49" width="79" height="15" uuid="cdbfe6cb-6dcc-420f-bb54-7f9ae4c972d8"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_refun}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="338" y="24" width="52" height="13" uuid="2f459ece-d72b-479d-bd0e-7cfaac22ff15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="24" width="100" height="13" uuid="05348dc4-590b-4d14-a809-23cbb1a0307b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_phn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="344" y="86" width="46" height="17" uuid="c7a989bd-3cb2-43bb-a5d4-d879f24b3ced"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Served By]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="86" width="100" height="17" uuid="6f33a587-30b7-4cb9-a3b5-7cf0560dce05"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_bag}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="103" width="62" height="20" uuid="052eaa9f-37b1-479f-acd4-d2180330cdc4"/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="37" width="42" height="13" uuid="6974e4d3-1a49-48f7-a9c6-7cd4880f70e1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Flight Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="476" y="37" width="68" height="13" uuid="6b59aabd-5c58-41bf-a74b-be00cb1d16ea"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_fd}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="219">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="444" y="44" width="100" height="20" uuid="974690bb-39c9-40ca-87ae-62c41d996a30"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="199" y="44" width="100" height="20" uuid="5d8fc7a3-4e68-4662-b656-27c3b1e306c1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Receipt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="0" width="151" height="31" uuid="f724a1d9-72db-4483-ac11-93a61ee1ecfc"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[ZD TOURS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="64" width="100" height="12" uuid="ddeb94e3-c699-4289-8337-d52fd939fd00"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_tid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="64" width="83" height="12" uuid="f20ade99-721b-43fc-86d2-d70f907432d2"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Transaction Id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="211" y="87" width="100" height="13" uuid="9be30feb-f8ae-40a3-b39f-41762acd07bd"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_pname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="338" y="86" width="52" height="13" uuid="a03e2a59-f678-4ccd-9a1f-0f988181afba"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="86" width="100" height="13" uuid="6334ddec-3eb3-4bf1-95cc-d9625d3ba931"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_phn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="128" y="86" width="83" height="13" uuid="45cbb2c7-2682-48eb-83ca-09f073d63a95"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Passenger Name]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="46" y="113" width="100" height="15" uuid="7f63a10b-a196-47b8-b7b5-eebc527542c5"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_rate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="279" y="113" width="100" height="14" uuid="6bda5f0d-2b86-43a5-b83e-12eb5b33a463"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_pay}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="465" y="112" width="79" height="15" uuid="699d436f-0579-41a9-a96e-72b481e5e4c3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_refun}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="113" width="29" height="14" uuid="787b06c7-490b-4c3a-ae84-478607c22bd2"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Rate]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="100" width="100" height="13" uuid="46827203-636b-4a40-9263-0d1ae76924ea"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_to}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="237" y="100" width="42" height="13" uuid="0ad546cf-6506-459f-b56d-57cb24e7497b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[To]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="113" width="42" height="14" uuid="44c7cfa2-6af6-4678-a8d8-17d1e2222bf4"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="29" height="12" uuid="e34c61ca-7894-49eb-8d29-e0f459f6aed7"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[From]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="113" width="31" height="15" uuid="a83a37f3-5389-40a9-9093-b8d4571349c3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Refund]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="46" y="100" width="100" height="12" uuid="edb4dbf2-39e5-4049-947b-1dca2009a9d1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_from}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="176" width="62" height="20" uuid="90c6aade-b29f-4837-a17d-2c68f4f82e96"/>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="149" width="100" height="17" uuid="040380e6-1b40-44de-a630-27f2bafc483f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_bag}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="344" y="149" width="46" height="17" uuid="b200b6ad-02f2-450c-a331-e11c2df0b3be"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Served By]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="476" y="99" width="68" height="13" uuid="77da0a0b-587c-486b-8650-f3033afae829"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{_fd}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="434" y="99" width="42" height="13" uuid="4bf761f8-d97d-4383-95a9-21f19b36d301"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Flight Date]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="18" splitType="Stretch"/>
+	</summary>
+</jasperReport>

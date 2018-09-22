@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Feb 28 13:38:10 NPT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0161-db66-9ceb-000000753e98 
+on database directory C:\Users\gaj\Documents\NetBeansProjects\travel accounting software\database with class loader sun.misc.Launcher$AppClassLoader@a57993 
+Loaded from file:/C:/Users/gaj/Documents/NetBeansProjects/travel%20accounting%20software/dist/run11826851/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_112-b15
+user.dir=C:\Users\gaj\Documents\NetBeansProjects\travel accounting software
+os.name=Windows 7
+os.arch=x86
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
